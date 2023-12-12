@@ -1,14 +1,15 @@
-# Py1xAPIAutomation
-
-#python API automation framework
-
-Hybrid system framework to test the Rest APIs
-
 Tech Stack
-Python3 3.8.10
-Request - HTTP Requests
-Pytest - Testing Framework
+Python 3.11
+Requests - HTTP Requests
+PyTest - Testing Framework
 Reporting - Allure Report, PyTest HTML
-Test Data - CSV, Excel , JSON
+Test Data - CSV, Excel, JSON
 Parallel Execution - x distribute
-###How to install packages ''pip install requests pytest pytest-html faker allure-pytest jsonschema'''
+How to Install Packages
+pip install requests pytest pytest-html faker allure-pytest jsonschema
+
+To Freeze your Package version
+pip freeze > requirements.txt
+
+To Install te Freeze Version
+pip install -r requirements.txt
