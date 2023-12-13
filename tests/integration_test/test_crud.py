@@ -25,12 +25,8 @@ class TestCreateBooking(object):
 
     @pytest.fixture()
     def create_booking(self):
-        response = post_requests(url=APIConstants.url_create_booking(),
-                                 auth=None,
-                                 headers=common_headers_json(),
-                                 payload=payload_create_booking(),
-                                 in_json=False
-        )
+        response = post_requests(url=APIConstants.url_create_booking(), auth=None, headers=common_headers_json(),
+                                 payload=payload_create_booking(), in_json=False)
         print(response)
         bookingid = response.json()["bookingid"]
         print(bookingid)
@@ -42,6 +38,7 @@ class TestCreateBooking(object):
                             create_booking):  # Token/ Basic Auth and Booking ID from the Create Booking, Token
         bookindId = create_booking
         put_url = APIConstants.url_create_booking() + "/" + str(bookindId)
+    #   put_url = APIConstants.url_create_booking() + "/383"
 
         response = put_requests(url=put_url, headers=common_headers_for_put_delete_patch(), auth=None,
                                 payload=payload_create_booking(), in_json=False)
@@ -50,6 +47,7 @@ class TestCreateBooking(object):
     def test_delete_booking(self, create_token, create_booking):  # Token and Booking ID from the Create Booking, Token
         bookindId = create_booking
         delete_url = APIConstants.url_create_booking() + "/" + str(bookindId)
+    #   delete_url = APIConstants.url_create_booking() + "/383"
 
         response = put_requests(url=delete_url, headers=common_headers_for_put_delete_patch(), auth=None,
                                 payload=None, in_json=False)
