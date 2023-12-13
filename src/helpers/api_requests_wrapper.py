@@ -5,6 +5,18 @@ import requests
 
 
 # HTTP Methods - Generic Functions
+'''
+def get_requests_in_json(url,in_json):
+    response = requests.get(url=url, auth=auth)
+    if in_json is True:
+        return response.json()
+    return response
+
+def get_requests(url, auth):
+    response = requests.get(url=url, auth=auth)
+    return response
+'''
+
 
 def get_requests(url, auth, in_json):
     response = requests.get(url=url, auth=auth)
@@ -42,8 +54,6 @@ def delete_requests(url, headers, auth, in_json):
 
 
 
-
-#
 # data = get_request("https://restfulbooker.com/booking/1", in_json= False)
 # data -> In return json, normal in json != True
 
