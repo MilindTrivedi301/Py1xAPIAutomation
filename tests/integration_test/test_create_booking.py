@@ -13,8 +13,20 @@ class TestCreateBooking(object):
     @pytest.mark.positive
     def test_create_booking_tc1(self):
         # URL, Headers, Payload,
+<<<<<<< HEAD
         response = post_requests(url=APIConstants.url_create_booking(), auth=None, headers=common_headers_json(),
                                  payload=payload_create_booking(), in_json=False)
+=======
+
+        payload = payload_create_booking()
+        print(payload)
+        #payload.update({"firstname: "pramod","lastname:"dutta})
+        payload["firstname"] = "Pramod"
+        print(payload)
+
+        response = post_requests(url=APIConstants.url_create_booking(), auth=None, headers=common_headers_json(),
+                                 payload=payload, in_json=False)
+>>>>>>> origin/main
         print(response)
         bookingid = response.json()["bookingid"]
         print(bookingid)
@@ -26,4 +38,8 @@ class TestCreateBooking(object):
         # URL, Headers, Payload,
         response = post_requests(url=APIConstants.url_create_booking(), auth=None, headers=common_headers_json(),
                                  payload={}, in_json=False)
+<<<<<<< HEAD
+=======
+        verify_http_status_code(response, 500)
+>>>>>>> origin/main
         verify_http_status_code(response, 500)
