@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-def payload_create_booking():
-    payload = {
-        "firstname": "Sumit",
-        "lastname": "New",
-=======
 from faker import Faker
 import json
 
@@ -14,7 +8,6 @@ def payload_create_booking():
     payload = {
         "firstname": "Jim",
         "lastname": "Brown",
->>>>>>> origin/main
         "totalprice": 111,
         "depositpaid": True,
         "bookingdates": {
@@ -25,8 +18,6 @@ def payload_create_booking():
     }
     return payload
 
-<<<<<<< HEAD
-=======
 def payload_create_booking_dynamic():
     json_payload = {
         "firstname": faker.first_name(),
@@ -43,7 +34,6 @@ def payload_create_booking_dynamic():
     return json_payload
 
 
->>>>>>> origin/main
 
 def payload_create_token():
     payload = {
