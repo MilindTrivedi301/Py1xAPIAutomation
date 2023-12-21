@@ -25,8 +25,8 @@ class TestCreateBooking(object):
 
         payload = payload_create_booking()
         print(payload)
-        # payload.update({"firstname: "pramod","lastname:"dutta})
-        payload["firstname"] = "Pramod"
+        # payload.update({"firstname: "milind","lastname:"trivedi})
+        payload["firstname"] = "Milind"
         print(payload)
 
         response = post_requests(url=APIConstants.url_create_booking(), auth=None, headers=common_headers_json(),

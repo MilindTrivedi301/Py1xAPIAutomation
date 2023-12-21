@@ -32,7 +32,7 @@ def make_request_auth(username, password):
     return response
 
 
-@pytest.mark.parametrize("user_cred", read_credentials_from_excel("/Users/pramod/PycharmProjects/Py1xAPIAutomation/tests/datadriventesting/testdata_ddt.xlsx"))
+@pytest.mark.parametrize("user_cred", read_credentials_from_excel("/Home/Downloads/PycharmProjects/Py1xAPIAutomation/tests/datadriventesting/Milind_Trivedi.xlsx"))
 def test_post_create_token(user_cred):
     username = user_cred["username"]
     password = user_cred["password"]

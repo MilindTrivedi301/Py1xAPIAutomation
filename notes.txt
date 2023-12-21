@@ -1,0 +1,84 @@
+Jenkins- Is a java application which will help to execute selenium test cases at the particular time
+
+---------------------------------------------------------
+
+1. HTP Method- Requestr- Python
+ 	a. GET/POST/PUT/DELETE/ PATCH.
+2. Varification?
+	a.PyTest
+3. Report
+	a. HTML ? Py Test Reposrt
+	b. Allure Report
+4. Read Excel, CSV, JSON file
+5. Logs -Logging
+6. Parallel execution
+
+---------------------------------------------------
+Rest Assured – Java lib which can help you to maake the http request (not a python lib)
+Requests- Python lib which can help you to make the http request (Alternate of the rest assured in python)
+#C# -  Rest.net, Rest Assured – HTTP Request
+
+pip- package manager in oython
+
+node –version
+sudo npm i -g allure-commandline
+pytest DEC/4th_Dec_2023/test_labAPI005.py –html=report.htmlclear
+pytest DEC/4th_Dec_2023/test_labAPI005.py –alluredir=reports
+ pytest tests/integration_test/test_create_booking.py -s -v --alluredir=./reports
+allure serve reports
+ allure serve allure_reports
+open the ip address shown in the smd line
+
+pip install pytest
+pytest -h
+pytest ib python is an alternative of testng in java
+
+Framework- Structure of a code, Best practices and guidekines to create a structure code that you can Maintain and Reuse , Skeleton, Scaled(Can be used by others)
+
+API Automation framework-
+1. Custom framework Hybrid- Modular(Method or duplicate code), keyword driven, Data driven (Data used from externally like csv,sql,excel )
+	a. Data driven -> 10 user, pass -> frame work driven by using the 10 user, pass and gives you a report
+
+
+
+VirtuakEnv -> isolated Python Env.
+
+
+  Directory -> Contains your python files (importing dic is not recommended)
+Pytho packages -> Dir (with icon 0)
+init.py(folder) -> impport this python
+package whenever it required in another module
+
+
+1. CRUD operation
+2. URLs
+3. Payloads
+4. Headers (Auth – Basic, API key)
+5. Verification Part – Assert(Pytest)
+
+
+to run test case parallel
+1. Testcase should br atomic -> 1 testcase per method on each
+2. They should not depend on each other
+3. If they depend -> make them a seprate test case
+
+pip install pytest-xdist
+pytest -n auto  => Automatically assign  task/test
+pytest -n auto test/parallel/test_parallel.py
+pytest -n -2 test/parallel/test_parallel.py
+pytest -n auto tests/integration_test/test_create_booking.py
+pytest -n auto tests/integration_test/test_create_booking.py -s -v   (-s to print all the logs /// -v tp print verbos logs)
+
+# Read the CSV or EXCEL file
+# Create a Function create_token which can take values from the Excel File
+# Verify the Expected Result
+
+# Read the Excel - openpyxl
+import openpyxl
+
+
+API Automation
+1. Data driven testing
+2. Dynamic Payload
+3. Dot Env (.env) – username, password
+4. JSON schema check
