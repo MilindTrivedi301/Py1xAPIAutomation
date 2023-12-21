@@ -20,7 +20,7 @@ def payload_create_booking():
 
 def payload_create_booking_dynamic():
     json_payload = {
-        "firstname": faker.first_name(),
+        "firstname": faker.first_name(),        # faker library will generates a fake/random name
         "lastname": faker.last_name(),
         "totalprice": faker.random_int(min=100, max=1000),
         "depositpaid": faker.boolean(),

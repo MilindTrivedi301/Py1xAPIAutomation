@@ -34,7 +34,7 @@ def make_request_auth(username, password):
 
 
 def test_post_create_token():
-    file_path = "/home/milind/Downloads/Milind_Trivedi.xlsx"
+    file_path = "/home/milind/Downloads/testdata_ddt.xlsx"
     credentials = read_credentials_from_excel(file_path)
 
     for user_cred in credentials:
